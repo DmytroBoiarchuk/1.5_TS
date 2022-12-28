@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="style.css">
     <title>Title</title>
 </head>
 <body>
 <div class="header">
-<h1>Timer</h1>
-    <p>Укажите время в минутах</p>
+    <h1>Timer</h1>
+    <p id="text">Укажите время в минутах</p>
 </div>
 <div class="timer">
-
+    <p id="time">5</p>
+    <button id="start"> Start </button>
+    <button id="mines" class="button-timer"> -</button>
+    <button id="plus" class="button-timer"> +</button>
 </div>
 <script src="moment/min/moment.min.js"></script>
 <script src="timer.js"></script>
