@@ -35,11 +35,11 @@ document.getElementById('start').addEventListener('click', () => {
   const cash = document.getElementById('time').innerHTML;
   let dur = moment.duration(time.innerHTML * 60 * 1000 - 1000);
   const interval = setInterval(() => {
-    time.innerHTML = moment(moment.duration(dur)
-      .asMilliseconds()).format(format);
+    time.innerHTML = moment(moment.duration(dur).asMilliseconds()).format(format);
     dur -= 1000;
     if (time.innerHTML === '00:00') {
       clearInterval(interval);
+
       hideOrShowButtons();
       time.innerHTML = cash;
     }
