@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const greet_1 = require("./greet");
 function showHello(divName, name) {
     const elt = document.getElementById(divName);
-    elt.innerText = (0, greet_1.sayHello)(name + "AbraKadab5asd45ra");
+    elt.innerText = (0, greet_1.sayHello)(name + "   ");
 }
 showHello("greeting", "TypeScript");
 },{"./greet":1}]},{},[2])

@@ -1,9 +1,8 @@
 {
-    "files": [
-        "src/main.ts"
-    ],
-    "compilerOptions": {
-        "noImplicitAny": true,
-        "target": "es2015"
-    }
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "target": "es2015",
+    "outDir": "dist",
+    "watch": true,
+  }
 }
