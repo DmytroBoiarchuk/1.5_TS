@@ -1,27 +1,27 @@
 function summ(a) {
-    const x = Object.keys(a).map((k) => {
-        const elem = a[k];
+    var x = Object.keys(a).map(function (k) {
+        var elem = a[k];
         if (elem === undefined)
             return 2021;
         if (elem.cvalue === undefined)
             return 2021;
         if (typeof elem.cvalue === 'string')
             return +elem.cvalue || 2021;
-        if (typeof elem.cvalue !== 'number')
-            return summ(elem.cvalue);
-        return elem.cvalue;
+        if (typeof elem.cvalue === 'number')
+            return elem.cvalue;
+        return summ(elem.cvalue);
     });
-    let sum = 0;
-    for (let i = 0; i < x.length; i++) {
+    var sum = 0;
+    for (var i = 0; i < x.length; i++) {
         sum += x[i];
     }
     return sum;
 }
-let A = {
+var A = {
     hello: { cvalue: 1 },
-    world: { cvalue: { yay: { cvalue: '2' } } },
+    world: { cvalue: { yay: { cvalue: '2' } } }
 };
-let B = {
+var B = {
     mobo: undefined,
     hello: { cvalue: 1 },
     world: {
@@ -29,10 +29,10 @@ let B = {
             yay: { cvalue: '2' },
             grgr: { cvalue: undefined },
             grr: { cvalue: '1' },
-            qq: undefined,
-        },
+            qq: undefined
+        }
     },
-    grgr: { cvalue: undefined },
+    grgr: { cvalue: undefined }
 };
 console.log(summ(A));
 console.log(summ(B));
